@@ -11,7 +11,7 @@ let favColor = prompt("What is your favorite color?")
 console.log("Great, " + favColor + " is my favorite color too!")
 
 
-
+//1
 let littleMermaid = prompt("How many days would you like to rent the Little mermaid?")
 
 
@@ -27,29 +27,15 @@ console.log(littleMermaid * 3 + broBear * 3 + strongBoi * 3 +" is your total cos
 
 
 
-
+//2
 
 let goog = prompt("How many hours did you work at Google this week?")
-
-
 let amazon = prompt("How many hours did you work at Amazon this week?")
-
-
 let meta = prompt("How many hours did you work at Facebook this week?")
-
 alert( goog * 400 + amazon * 380 + meta * 350 + " is your total compensation in dollars this week, congrats!!!")
 console.log(goog * 400 + amazon * 380 + meta * 350 + " is your total compensation in dollars this week, congrats!!!")
 
-
-
-
-
-
-
-
-
-
-
+//3
 
 let plsEnroll = prompt("Would you like to attend this class?")
 if (plsEnroll === "yes") {
@@ -66,7 +52,7 @@ if (availDays >= 1 ) {
     alert("Congrats you can attend this class!")
 }else alert("I'm sorry you will not be able to attend with your current schedule")
 
-
+//4
 let purchasedItems = prompt("How many items are you purchasing?")
 let premMember = prompt("Are you a premium member?")
 let offer = 20/30
@@ -76,7 +62,7 @@ if (premMember === "yes" && offer <= expires){
     alert("Proceed to checkout")
 }else if (premMember === "no"  && purchasedItems >= 2){
     alert("Proceed to checkout")
-}else if (premMember === "no"  && purchasedItems < 2){
+}else if(premMember === "no"  && purchasedItems < 2){
     alert("Please purchase at least 2 items.")
 }
 
