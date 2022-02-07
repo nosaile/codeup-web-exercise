@@ -24,11 +24,7 @@ let rideCost = Math.floor(Math.random() * 25).toFixed(2)
 let driversNearby = Math.random() >= 0.5
 
 function canGetRideshare(){
-    if(driversNearby && accountFunds >= rideCost) {
-        return true
-    }else{
-        return false
-    }
+    return driversNearby && accountFunds >= rideCost;
 
 }
 canGetRideshare()
