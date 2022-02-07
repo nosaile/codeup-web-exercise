@@ -1,61 +1,61 @@
-"use strict";
-/* TODO: MINI-EXERCISE:
-*   -> Write a function named getName() which will return the result of the user inputting their name(s)
-*   -> Console log the invocation of getName() to ensure it works properly
-*   -> Now, write a function named showName(username).
-*       -> It takes in 'username' as an argument and alerts the user to their name
-*       -> Pass an invocation of getName() as an argument to the invocation of showName()
-*       -> showName() should be void function. That is, it should not return a value - only execute code
-*   -> Test to ensure your code is working as expected
-* */
-//This is where the fun begins
-//
-//
-// function getName(){
-//     return prompt("What is your name?")
-// }
-//
-// console.log(getName())
+// "use strict";
+// /* TODO: MINI-EXERCISE:
+// *   -> Write a function named getName() which will return the result of the user inputting their name(s)
+// *   -> Console log the invocation of getName() to ensure it works properly
+// *   -> Now, write a function named showName(username).
+// *       -> It takes in 'username' as an argument and alerts the user to their name
+// *       -> Pass an invocation of getName() as an argument to the invocation of showName()
+// *       -> showName() should be void function. That is, it should not return a value - only execute code
+// *   -> Test to ensure your code is working as expected
+// * */
+// //This is where the fun begins
 // //
 // //
+// // function getName(){
+// //     return prompt("What is your name?")
+// // }
 // //
-// function showName(username){
-//     alert(username)
-// }
-// showName(getName())
-//
-// //Make a function named isLowerCase(letter) which returns true if the parameter is lowercased
-//
-//
-//
-// function isLowerCase(letter){
-//     if(letter === letter){
-//         return true
-//     }
-//
-//
-// }
-// isLowerCase(letter)
-//
-//
+// // console.log(getName())
 // // //
 // // //
-// //Write a function named double(n) that returns a number times two
+// // //
+// // function showName(username){
+// //     alert(username)
+// // }
+// // showName(getName())
+// //
+// // //Make a function named isLowerCase(letter) which returns true if the parameter is lowercased
+// //
+// //
+// //
+// // function isLowerCase(letter){
+// //     if(letter === letter){
+// //         return true
+// //     }
+// //
+// //
+// // }
+// // isLowerCase(letter)
+// //
+// //
+// // // //
+// // // //
+// // //Write a function named double(n) that returns a number times two
+// //
+// // let n = prompt("Input any number")
+// // function double(n){
+// //     return prompt("Input any number")
+// // }
+// //
+// // console.log(double(n) * 2)
 //
-// let n = prompt("Input any number")
-// function double(n){
-//     return prompt("Input any number")
-// }
-//
-// console.log(double(n) * 2)
-
-
-
 //
 //
-//Make a function named areIdentical(input1, input2) that returns true if both inputs are same value and data type.
-
-
+// //
+// //
+// //Make a function named areIdentical(input1, input2) that returns true if both inputs are same value and data type.
+//
+//
 
 /**
  * TODO:
@@ -111,13 +111,8 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(random){
-    if(random === 2){
-        return true
-    }else{
-        return false
-    }
+    return random === 2;
 }
 console.log(isTwo(random), random)
 
@@ -151,8 +146,6 @@ let tipAmount = prompt("What percentage would you like to tip") * .01
 let totalAmount = prompt("Please enter your bill amount here.")
 function calculatedTip(tipAmount, totalAmount){
     return totalAmount * tipAmount
-
-
 }
 alert(calculatedTip(tipAmount, totalAmount) + " " + "is the amount to tip for your bill based on your chosen" +
     " percentage.")
@@ -173,19 +166,19 @@ console.log(calculatedTip(tipAmount, totalAmount) + " " + "is the amount to tip 
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-
+//
 let originalP = prompt("How much did you spend today? We will automatically apply a random discount to your total.")
-let discountP = Math.random() * (1 - 0) + 0
+let discountP = Math.floor(Math.random() * (100)) * .01
 
 
 function applyDiscount(originalP, discountP){
     return originalP - (discountP * originalP)
 
 }
-console.log(applyDiscount(originalP, discountP) + " " + "is your total after applying our random discount.")
+console.log(applyDiscount(originalP, discountP).toFixed(2) + " " + "is your total after applying our random discount.")
 console.log(discountP + " " + "was the percentage of the random discount")
 
-
-
-
-
+//
+//
+//
+//
