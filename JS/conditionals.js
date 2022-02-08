@@ -139,7 +139,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
+//
 // let response = prompt("What was your total?")
 // let lucky = Math.floor(Math.random()*6)
 // function calculateTotal(lucky, response){
@@ -214,19 +214,103 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-confirm("Would you like to enter a number?")
-if(confirm("Would you like to enter a number")){
-    prompt("Please enter a number")
-}
+let y =confirm("Would you like to pick a number?")
+let x = prompt("Please enter a number here.")
+if(y){
+    x
+}else alert("Goodbye.")
+///////
 
-let userInput = prompt("Please enter a number")
-if(prompt("Please enter a number") % 2 === 0){
-    alert("This number is an even number!")
-}else {
-    alert("This number is an odd number!")
-}
 
-alert("Your chosen number plus 100 is " + (userInput + 100) + ".")
+///////
+
+let even = x % 2 === 0;
+let odd = x % 2 !== 0;
+let plus = parseInt(x) + parseInt(100);
+let neg = x <= -1;
+let pos = x >= 0;
+/////
+function prompter(){
+
+    if(even && neg){
+        console.log("This number is both even and negative, here it is if you add 100 to it, " + plus);
+    }else if(even && pos){
+        console.log("This number is both even and positve, here it is if you add 100 to it, " + plus);
+    }else if(odd && neg){
+        console.log("This number is both odd and negative, here it is if you add 100 to it, " + plus);
+    }else if(odd && pos){
+        console.log("This number is both odd and positive, here it is if you add 100 to it, " + plus);
+    }else alert("The data type you entered is unknown to me, please enter a number.");
+}
+prompter(even, odd, plus, neg, pos);
+/////
+console.log(even, odd, plus, neg, pos);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if(confirm("Would you like to enter a number")){
+//     prompt("Please enter a number")
+//     let userInput = prompt("Please enter a number")
+//     if( typeof userInput !== typeof Number){
+//         alert("You have entered an incorrect data type, please redo with a NUMBER!")
+//     }
+// }
+//
+// function inputType(userType){
+//     if(typeof userInput !== typeof Number ){
+//         userInput
+//     }else if(typeof userInput === typeof Number){
+//
+//     }
+//
+// }
+// if(prompt("Please enter a number") % 2 === 0){
+//     alert("This number is an even number!")
+// }else if(prompt("Please enter a number") % 2 !== 0) {
+//     alert("This number is an odd number!")
+// }
+// alert("Your chosen number plus 100 is " + (parseInt(userInput)+parseInt(100) + "."))
+//
+//
+//
+// if(userInput >= 1){
+//     alert("This number is a positive number!")
+// }else if(userInput <= -1){
+//     alert("This numvber is a negative number!")
+// }else if(userInput === 0){
+//     alert("That is zero!")
+// }else{
+//     userInput
+//
+// }
+
+
+
+
 
 
 
