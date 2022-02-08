@@ -21,23 +21,23 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// var input = "red"
-// function analyzeColor(input){
-//     switch (input){
-//         case "red":
-//             console.log("red is for roses")
-//             break;
-//         case "blue":
-//             console.log("blue is for the ocean")
-//             break;
-//         case "yellow":
-//             console.log("yellow is for bananas")
-//             break;
-//         default:
-//             console.log("i don't know anything about, " + input + ".")
-//     }
-// }
-// analyzeColor(input)
+var input = "red"
+function analyzeColor(input){
+    switch (input){
+        case "red":
+            console.log("red is for roses")
+            break;
+        case "blue":
+            console.log("blue is for the ocean")
+            break;
+        case "yellow":
+            console.log("yellow is for bananas")
+            break;
+        default:
+            console.log("i don't know anything about, " + input + ".")
+    }
+}
+analyzeColor(input)
 
 
 // Don't change the next two lines!
@@ -53,46 +53,46 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-// var input = randomColor
-// function analyzeColor(input){
-//     switch (input){
-//         case "red":
-//             console.log("red is for roses")
-//             break;
-//         case "blue":
-//             console.log("blue is for the ocean")
-//             break;
-//         case "yellow":
-//             console.log("yellow is for bananas")
-//             break;
-//         default:
-//             console.log("i don't know anything about, " + input + ".")
-//     }
-// }
-// analyzeColor(input)
+var input = randomColor
+function analyzeColor(input){
+    switch (input){
+        case "red":
+            console.log("red is for roses")
+            break;
+        case "blue":
+            console.log("blue is for the ocean")
+            break;
+        case "yellow":
+            console.log("yellow is for bananas")
+            break;
+        default:
+            console.log("i don't know anything about, " + input + ".")
+    }
+}
+analyzeColor(input)
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 //i originally used a switch case
-// var input = randomColor
-// function analyzeColor(input){
-//     switch (input){
-//         case "red":
-//             console.log("red is for roses")
-//             break;
-//         case "blue":
-//             console.log("blue is for the ocean")
-//             break;
-//         case "yellow":
-//             console.log("yellow is for bananas")
-//             break;
-//         default:
-//             console.log("i don't know anything about, " + input + ".")
-//     }
-// }
-// analyzeColor(input)
+var input = randomColor
+function analyzeColor(input){
+    switch (input){
+        case "red":
+            console.log("red is for roses")
+            break;
+        case "blue":
+            console.log("blue is for the ocean")
+            break;
+        case "yellow":
+            console.log("yellow is for bananas")
+            break;
+        default:
+            console.log("i don't know anything about, " + input + ".")
+    }
+}
+analyzeColor(input)
 
 /**
  * TODO:
@@ -100,23 +100,23 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// let input = prompt("Please pick one of the following: red, blue, green, yellow, orange, indigo, violet.")
-// function analyzeColor(input){
-//     switch (input){
-//         case "red":
-//             console.log("red is for roses")
-//             break;
-//         case "blue":
-//             console.log("blue is for the ocean")
-//             break;
-//         case "yellow":
-//             console.log("yellow is for bananas")
-//             break;
-//         default:
-//             console.log("i don't know anything about the color, " + input + ".")
-//     }
-// }
-// analyzeColor(input)
+let input = prompt("Please pick one of the following: red, blue, green, yellow, orange, indigo, violet.")
+function analyzeColor(input){
+    switch (input){
+        case "red":
+            console.log("red is for roses")
+            break;
+        case "blue":
+            console.log("blue is for the ocean")
+            break;
+        case "yellow":
+            console.log("yellow is for bananas")
+            break;
+        default:
+            console.log("i don't know anything about the color, " + input + ".")
+    }
+}
+analyzeColor(input)
 
 /* ########################################################################## */
 
@@ -139,45 +139,45 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-//
-// let response = prompt("What was your total?")
-// let lucky = Math.floor(Math.random()*6)
-// function calculateTotal(lucky, response){
-//     switch(lucky){
-//         case 0:
-//             console.log(response);
-//             console.log("You get no discount today.")
-//             break;
-//         case 1:
-//             console.log(response - (response * .1));
-//             response = response - (response * .1);
-//             console.log("You get 10% off today.")
-//             break;
-//         case 2:
-//             console.log(response - (response * .25));
-//             response = response - (response * .25);
-//             console.log("You get 25% off today.")
-//             break;
-//         case 3:
-//             console.log(response - (response * .35));
-//             response = response - (response * .35);
-//             console.log("You get 35% off today")
-//             break;
-//         case 4:
-//             console.log(response - (response * .5));
-//             response = response - (response * .5);
-//             console.log("You get 50% off today")
-//             break;
-//         case 5:
-//             console.log(response - response);
-//             response = response - response;
-//             console.log("You get everything for free today.")
-//             break;
-//     }
-//     alert(lucky + " was your lucky number, making your new total  " + response + ", from the original " + prompt("What was your total?"))
-// }
-//
-// calculateTotal(lucky, response);
+
+let response = prompt("What was your total?")
+let lucky = Math.floor(Math.random()*6)
+function calculateTotal(lucky, response){
+    switch(lucky){
+        case 0:
+            console.log(response);
+            console.log("You get no discount today.")
+            break;
+        case 1:
+            console.log(response - (response * .1));
+            response = response - (response * .1);
+            console.log("You get 10% off today.")
+            break;
+        case 2:
+            console.log(response - (response * .25));
+            response = response - (response * .25);
+            console.log("You get 25% off today.")
+            break;
+        case 3:
+            console.log(response - (response * .35));
+            response = response - (response * .35);
+            console.log("You get 35% off today")
+            break;
+        case 4:
+            console.log(response - (response * .5));
+            response = response - (response * .5);
+            console.log("You get 50% off today")
+            break;
+        case 5:
+            console.log(response - response);
+            response = response - response;
+            console.log("You get everything for free today.")
+            break;
+    }
+    alert(lucky + " was your lucky number, making your new total  " + response + ", from the original " + prompt("What was your total?"))
+}
+
+calculateTotal(lucky, response);
 
 
 
@@ -247,31 +247,9 @@ prompter(even, odd, plus, neg, pos);
 console.log(even, odd, plus, neg, pos);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/** This was my work before I figured it out completely, shown below this message
+ *
+ */
 // if(confirm("Would you like to enter a number")){
 //     prompt("Please enter a number")
 //     let userInput = prompt("Please enter a number")
