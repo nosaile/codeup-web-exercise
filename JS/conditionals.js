@@ -100,9 +100,9 @@ analyzeColor(input)
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-let input = prompt("Please pick one of the following: red, blue, green, yellow, orange, indigo, violet.")
-function analyzeColor(input){
-    switch (input){
+let input1 = prompt("Please pick one of the following: red, blue, green, yellow, orange, indigo, violet.")
+function analyzeColor(input1){
+    switch (input1){
         case "red":
             console.log("red is for roses")
             break;
@@ -113,10 +113,10 @@ function analyzeColor(input){
             console.log("yellow is for bananas")
             break;
         default:
-            console.log("i don't know anything about the color, " + input + ".")
+            console.log("i don't know anything about the color, " + input1 + ".")
     }
 }
-analyzeColor(input)
+analyzeColor(input1)
 
 /* ########################################################################## */
 
@@ -214,16 +214,12 @@ calculateTotal(lucky, response);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let y =confirm("Would you like to pick a number?")
+let y = confirm("Would you like to pick a number?")
 let x = prompt("Please enter a number here.")
 if(y){
     x
 }else alert("Goodbye.")
 ///////
-
-
-///////
-
 let even = x % 2 === 0;
 let odd = x % 2 !== 0;
 let plus = parseInt(x) + parseInt(100);
@@ -233,18 +229,18 @@ let pos = x >= 0;
 function prompter(){
 
     if(even && neg){
-        console.log("This number is both even and negative, here it is if you add 100 to it, " + plus);
+        alert("This number is both even and negative, here it is if you add 100 to it, " + plus);
     }else if(even && pos){
-        console.log("This number is both even and positve, here it is if you add 100 to it, " + plus);
+        alert("This number is both even and positve, here it is if you add 100 to it, " + plus);
     }else if(odd && neg){
-        console.log("This number is both odd and negative, here it is if you add 100 to it, " + plus);
+        alert("This number is both odd and negative, here it is if you add 100 to it, " + plus);
     }else if(odd && pos){
-        console.log("This number is both odd and positive, here it is if you add 100 to it, " + plus);
+        alert("This number is both odd and positive, here it is if you add 100 to it, " + plus);
     }else alert("The data type you entered is unknown to me, please enter a number.");
 }
 prompter(even, odd, plus, neg, pos);
-/////
-console.log(even, odd, plus, neg, pos);
+
+
 
 
 /** This was my work before I figured it out completely, shown below this message

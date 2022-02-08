@@ -80,20 +80,20 @@ let number = Math.floor(Math.random() * 100)
 //
 //
 //
-// let input = number
-// function isMultipleOfThree(input){
-//     if(number % 3 == 0){
-//         return true
-//     }else{
-//         return false
-//     }
-// }
-//
-// console.log(isMultipleOfThree(input));
-// console.log(number)
-//
-//
-//
+let input = number
+function isMultipleOfThree(input){
+    if(number % 3 === 0){
+        return true
+    }else{
+        return false
+    }
+}
+
+console.log(isMultipleOfThree(input));
+console.log(number)
+
+
+
 // let input = number
 // function isMultipleOfThreeAndFive(input){
 //     if(number % 3 == 0 && number % 5 == 0){
