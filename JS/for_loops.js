@@ -17,7 +17,7 @@
 // }
 // showMultiplicationTable(0)
 //
-//
+
 //
 //
 for (var y = 0; y < 10; y++) {
