@@ -44,31 +44,32 @@
 //  write a do-while loop that prints the spaces available. If the parking lot gets filled, print "this parking lot
 //  is now full" to the console.
 //
-// let spaces = 30
-// console.log("Welcome to the parking lot.")
-// do{
-//     console.log("There is " + spaces + " spaces available.");
-//     spaces -= 2;
-// }while (spaces)
-// console.log("There are no more spaces available.");
+let spaces = 30
+console.log("Welcome to the parking lot.")
+do{
+    console.log("There is " + spaces + " spaces available.");
+    spaces -= 2;
+}while (spaces)
+console.log("There are no more spaces available.");
 
 
 // TODO: using prompt() and alert(), write a while loop that will continue to ask for the correct password until the
 //  correct password is given.
 
-
-let pass = "123456";
-let isCorrect = true;
-let attempt = "";
-
-while(isCorrect){
-    attempt = prompt("What is your password?");
-    isCorrect = (attempt === pass);
-    if(!isCorrect){
-        alert("That is not your password.");
-    }
+let password = ""
+while (password !== "123456") {
+    password = prompt("Enter your password")
 }
-alert("That is correct.")
+alert("You are logged in.")
+
+
+
+
+
+
+
+
+
 
 
 
