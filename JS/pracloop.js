@@ -10,13 +10,13 @@
 
 
 //show odds between 8 - 50
-// let x = 8;
-// while(x <= 50){
-//     if(x % 2 !== 0){
-//         console.log(x)
-//     }
-//     x++
-// }
+let x = 8;
+while(x <= 50){
+    if(x % 2 !== 0){
+        console.log(x)
+    }
+    x++
+}
 
 
 //show evens between 8 - 50
