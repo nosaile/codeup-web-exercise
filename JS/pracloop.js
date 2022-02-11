@@ -17,7 +17,7 @@ while(x <= 50){
     }
     x++
 }
-
+//
 
 //show evens between 8 - 50
 // let x = 8;
