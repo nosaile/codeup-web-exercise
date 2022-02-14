@@ -45,3 +45,9 @@ getFizzBuzz(15)
 //While Loops with functions
 
 //1
+function getPassword(){
+    prompt("Enter the password...")
+}
+let passWord = '123456'
+let userEntry = prompt("Enter the password...")
+

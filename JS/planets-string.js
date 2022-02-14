@@ -25,8 +25,16 @@
      * string, and <li> tags around each planet.
      */
 
+
     planetsString = planetsArray.join("\n");
     console.log(planetsString);
+
+
+
+
+
+
+
 
 
 
