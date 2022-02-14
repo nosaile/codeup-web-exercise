@@ -5,20 +5,22 @@
     var circle = {
         radius: 3,
 
+
         getArea: function () {
+           var areaOfCircle = Math.PI * Math.pow(circle.radius, 2)
             // TODO: complete this method
             // hint: area = pi * radius^2
 
-            return; // TODO: return the proper value
+            return areaOfCircle; // TODO: return the proper value
         },
-
+//what does it mean, if doRounding is true??
         logInfo: function (doRounding) {
             // TODO: complete this method.
-
+            // Math.round(this.getArea()) --- round the area
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
 
-            console.log("Area of a circle with radius: " + this.radius + ", is: ");
+            console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea());
         }
     };
 
