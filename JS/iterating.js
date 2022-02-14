@@ -18,7 +18,10 @@ console.log(peoplesNames.length)
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-console.log(peoplesNames[0])
+    console.log(peoplesNames[0])
+    console.log(peoplesNames[1])
+    console.log(peoplesNames[2])
+    console.log(peoplesNames[3])
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
@@ -50,25 +53,48 @@ peoplesNames.forEach(function (names){
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    console.log(first(peoplesNames))
-    function first(first){
-       return first[0]
-        //console.log(first[0])
-
-
+    first(peoplesNames)
+    function first(anArray){
+       return anArray[0]
     }
 
-console.log(second(peoplesNames))
-    function second(second){
-return second[1]
+    second(peoplesNames)
+    function second(anArray){
+        return anArray[1]
+    }
 
-}
+    lastIn(peoplesNames)
+    function lastIn(anArray){
+        return anArray[anArray.length -1]
+    }
 
-    console.log(last(peoplesNames))
-    function last(last){
-        return last[last.length -1]
 
-}
+
+
+
+
+
+    //     console.log(first(peoplesNames))
+//     function first(anArray){
+//        return anArray[0]
+//         //console.log(first[0])
+//
+//
+//     }
+//
+// console.log(second(peoplesNames))
+//     function second(anArray){
+// return anArray[1]
+//
+// }
+//
+//     console.log(last(peoplesNames))
+//     function last(anArray){
+//         return anArray[anArray.length - 1]
+//
+// }
+
+
 
 
 
