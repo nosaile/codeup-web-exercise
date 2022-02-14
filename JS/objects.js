@@ -11,12 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-var theNames = {
-    firstName: "Chris",
-    lastName: "Eliason",
-    }
-    console.log(theNames.firstName)
-    console.log(theNames.lastName)
+// var theNames = {
+//     firstName: "Chris",
+//     lastName: "Eliason",
+//     }
+//     console.log(theNames.firstName)
+//     console.log(theNames.lastName)
 
 
     /**
@@ -28,14 +28,14 @@ var theNames = {
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    var theNames = {
-        firstName: "Chris",
-        lastName: "Eliason",
-        sayHello: function sayHello(){
-            return "Hello, " + theNames.firstName + " " + theNames.lastName;
-        },
-    }
-    console.log(theNames.sayHello())
+    // var theNames = {
+    //     firstName: "Chris",
+    //     lastName: "Eliason",
+    //     sayHello: function sayHello(){
+    //         return "Hello, " + theNames.firstName + " " + theNames.lastName;
+    //     },
+    // }
+    // console.log(theNames.sayHello())
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -61,19 +61,11 @@ shoppers.forEach(function(shopper) {
 
     var discount = shopper.amount * .12;
     if(shopper.amount > 200){
-        console.log(shopper.name +" " + shopper.amount +" "+ discount + " "+ (shopper.amount -discount))
-    }else {console.log("You do not")}
+        console.log(shopper.name +" " + shopper.amount +" "+ discount + " "+ (shopper.amount -discount));
+    }else {console.log(shopper.name +" " + shopper.amount  + " 0 " + shopper.amount);}
     //console.log(discount)
 
 })
-
-
-
-
-
-
-
-
 
 
 
@@ -97,6 +89,9 @@ shoppers.forEach(function(shopper) {
         {title: "Random Title of Book", author: {firstName: "Randy", lastName: "Omme"}},
         ]
     console.log(books[4].author.lastName)
+    console.log(books[4].title)
+    console.log(books[2].title)
+    console.log(books[0].author.firstName)
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -116,6 +111,16 @@ shoppers.forEach(function(shopper) {
      *      Author: Stephen Hawking
      */
 
+books.forEach(function (book) {
+var y = books.indexOf(book)
+       console.log("Book # " + ++y)
+       console.log("Title: " + book.title)
+       console.log("Author: " + book.author.firstName + " " + book.author.lastName)
+    console.log(" ")
+
+
+
+})
 
 
     /**
