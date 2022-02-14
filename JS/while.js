@@ -13,7 +13,7 @@ do{
     let custCones = Math.floor(Math.random() * 5) + 1;
     console.log(allCones - custCones);
 
-}while(console.log(10)){
+}while(console.log()){
 
  }
 //
