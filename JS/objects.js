@@ -82,9 +82,9 @@ shoppers.forEach(function(shopper) {
      * > console.log(books[0].author.lastName) // "Adams"
      */
     var books = [
-        {title: "The Great Confusion", author: {firstName: "Toby", lastName: "Tobeyrson"} },
+        {title: "The Great Confusion", author: {firstName: "Fi", lastName: "Guroute"} },
         {title: "A Book by Chris", author: {firstName: "Chris", lastName: "Eliason"}},
-        {title: "Title of Book should go here", author: {firstName: "Casper", lastName: "Ghostinson"}},
+        {title: "Title of Book should go here", author: {firstName: "Veri", lastName: "Literalli"}},
         {title: "Hats on Cats", author: {firstName: "Dokter", lastName: "Suesser"}},
         {title: "Random Title of Book", author: {firstName: "Randy", lastName: "Omme"}},
         ]
