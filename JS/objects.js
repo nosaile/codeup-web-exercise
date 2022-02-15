@@ -28,15 +28,15 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    // var theNames = {
-    //     firstName: "Chris",
-    //     lastName: "Eliason",
-    //     sayHello: function sayHello(){
-    //         return "Hello, " + theNames.firstName + " " + theNames.lastName;
-    //     },
-    // }
-    // console.log(theNames.sayHello())
-
+    var theNames = {
+        firstName: "Chris",
+        lastName: "Eliason",
+        sayHello: function sayHello(){
+            return "Hello, " + theNames.firstName + " " + theNames.lastName;
+        },
+    }
+    console.log(theNames.sayHello())
+    console.log(" ")
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -66,7 +66,7 @@ shoppers.forEach(function(shopper) {
     //console.log(discount)
 
 })
-
+    console.log(" ")
 
 
     /** TODO:
@@ -88,10 +88,9 @@ shoppers.forEach(function(shopper) {
         {title: "Hats on Cats", author: {firstName: "Dokter", lastName: "Suesser"}},
         {title: "Random Title of Book", author: {firstName: "Randy", lastName: "Omme"}},
         ]
-    console.log(books[4].author.lastName)
-    console.log(books[4].title)
-    console.log(books[2].title)
-    console.log(books[0].author.firstName)
+function pushBook(){
+
+}
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -133,5 +132,16 @@ var y = books.indexOf(book)
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+function createBook(){
+
+
+
+
+
+}
+
+
+
+
 
 })();
