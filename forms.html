@@ -7,15 +7,16 @@
 <body>
 <form method="POST" action="https://request-inspector.glitch.me/">
     <label for="email">
-        <input id="email" type="text" name="email" placeholder="Enter an email address">
+        <input id="email" type="text" name="email" placeholder="Enter an email address"><strong>Email</strong>
     </label>
     <br>
     <br>
     <label for="password">
-        <input id="password" type="password" name="password" placeholder="Enter a password">
+        <input id="password" type="password" name="password" placeholder="Enter a password"><strong>Password</strong>
     </label>
     <hr>
     <section>
+        <h4>Please tell us about yourself!</h4>
         <label for="userbio">
             <textarea id="userbio" type="text" name="User Bio"
                       placeholder="Introduce yourself with a quick bio!"></textarea>
@@ -23,40 +24,44 @@
     </section>
     <hr>
     <section>
+        <h4>How did you hear about us?</h4>
         <label for="billboard">
-            <input id="billboard" type="radio" name="hear_about" value="Billboard"></label>Billboard<br>
+            <input id="billboard" type="radio" name="how_hear_about" value="Billboard"></label>Billboard<br>
         <label for="internetadvert">
-            <input id="internetadvert" type="radio" name="hear_about" value="InternetAdvertisement"></label>Internet
+            <input id="internetadvert" type="radio" name="how_hear_about" value="InternetAdvertisement"></label>Internet
         Advertisement<br>
         <label for="radioadvert">
-            <input id="radioadvert" type="radio" name="hear_about" value="RadioAdvertisement"></label>Radio
+            <input id="radioadvert" type="radio" name="how_hear_about" value="RadioAdvertisement"></label>Radio
         Advertisement<br>
         <label for="otherhearabout">
-            <input id="otherhearabout" type="radio" name="hear_about" value="Other"></label>Other<br>
+            <input id="otherhearabout" type="radio" name="how_hear_about" value="Other"></label>Other<br>
     </section>
     <hr>
     <section>
+        <h4>Select your browser</h4>
         <label for="webbrowser">
-        <select id="webbrowser" name="web_browser_select">
+            <select id="webbrowser" name="web_browser_select">
 
-            <label for="chrome">
-                <option id="chrome" value="Chrome">Chrome</option>
-            </label>
-            <label for="safari">
-                <option id="safari" value="Safari">Safari</option>
-            </label>
-            <label for="firefox">
-                <option id="firefox" value="Firefox">Firefox</option>
-            </label>
-            <label for="ie">
-                <option id="ie" value="IE">Internet Explorer</option>
-            </label>
-            <label for="otherbrowser">
-                <option id="otherbrowser" value="Other">Other</option>
-            </label>
-        </select></label>
+                <label for="chrome">
+                    <option id="chrome" value="Chrome">Chrome</option>
+                </label>
+                <label for="safari">
+                    <option id="safari" value="Safari">Safari</option>
+                </label>
+                <label for="firefox">
+                    <option id="firefox" value="Firefox">Firefox</option>
+                </label>
+                <label for="ie">
+                    <option id="ie" value="IE">Internet Explorer</option>
+                </label>
+                <label for="otherbrowser">
+                    <option id="otherbrowser" value="Other">Other</option>
+                </label>
+            </select></label><br>
+        <hr>
     </section>
-
+    <h5>When form is complete please submit</h5>
+    <button type="submit">Submit the form</button>
 
 </form>
 </body>
