@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin: 5px;
+    background-color: lightskyblue;
+    color: darkslategrey;
+    border-radius: 100px;
+
+}
+
+.success {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin: 5px;
+    background-color: darkseagreen;
+    color: darkslategrey;
+    border-radius: 100px;
+
+}
+
+.warning {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin: 5px;
+    background-color: goldenrod;
+    color: darkslategrey;
+    border-radius: 100px;
+
+}
+
+.error {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin: 5px;
+    background-color: indianred;
+    color: darkslategrey;
+    border-radius: 100px;
+
+
+}
