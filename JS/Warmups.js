@@ -87,11 +87,9 @@
 // console.log(addNames())
 
 
-
-
 //Warmup: Create a function which returns true if the given argument is a number, false if it is not a number
 
-function isNum(input){
+function isNum(input) {
     return typeof input === "number";
 }
 

@@ -1,0 +1,17 @@
+.fancy-header {
+    color: mediumpurple;
+    text-decoration: underline;
+}
+ body {
+     background-color: bisque;
+ }
+
+ th {
+     background-color: chocolate;
+ }
+ td {
+     background-color: cadetblue;
+ }
+ h2 {
+     color: tomato;
+ }
