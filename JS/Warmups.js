@@ -73,15 +73,33 @@
 // console.log(personContactInfo3.emailAddress);
 // console.log(personContactInfo2.state);
 
-let nameArray = [];
-let confirmation = true;
-function addNames(){
-    while(confirmation === true){
-        nameArray.push(prompt("Add another name?"));
-         confirmation = confirm("Are you not done adding names?");
+// let nameArray = [];
+// let confirmation = true;
+// function addNames(){
+//     while(confirmation === true){
+//         nameArray.push(prompt("Add another name?"));
+//          confirmation = confirm("Are you not done adding names?");
+//
+//
+//     }return nameArray;
+// }
+// addNames()
+// console.log(addNames())
 
 
-    }return nameArray;
+
+
+//Warmup: Create a function which returns true if the given argument is a number, false if it is not a number
+
+function isNum(input){
+    if(typeof input !== "number"){
+        return false
+    }return true
 }
-addNames()
-console.log(addNames())
+
+console.log(isNum(1));
+console.log(isNum("1"));
+console.log(isNum(true));
+console.log(isNum(false));
+console.log(isNum([""]))
+console.log(isNum([]))
