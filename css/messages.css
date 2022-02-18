@@ -10,10 +10,10 @@ body, html {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
-    margin: 5px;
+    margin: 10px;
     background-color: lightskyblue;
     color: darkslategrey;
-    border-radius: 100px;
+    border-radius: 5px;
 
 }
 
@@ -21,10 +21,10 @@ body, html {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
-    margin: 5px;
-    background-color: darkseagreen;
+    margin: 10px;
+    background-color: lightgreen;
     color: darkslategrey;
-    border-radius: 100px;
+    border-radius: 5px;
 
 }
 
@@ -32,10 +32,10 @@ body, html {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
-    margin: 5px;
-    background-color: goldenrod;
+    margin: 10px;
+    background-color: gold;
     color: darkslategrey;
-    border-radius: 100px;
+    border-radius: 5px;
 
 }
 
@@ -43,10 +43,10 @@ body, html {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
-    margin: 5px;
-    background-color: indianred;
+    margin: 10px;
+    background-color: lightcoral;
     color: darkslategrey;
-    border-radius: 100px;
+    border-radius: 5px;
 
 
 }
