@@ -89,13 +89,16 @@
 
 //Warmup: Create a function which returns true if the given argument is a number, false if it is not a number
 
-function isNum(input) {
-    return typeof input === "number";
-}
+// function isNum(input) {
+//     return typeof input === "number";
+// }
+//
+// console.log(isNum(1));
+// console.log(isNum("1"));
+// console.log(isNum(true));
+// console.log(isNum(false));
+// console.log(isNum([""]))
+// console.log(isNum([]))
 
-console.log(isNum(1));
-console.log(isNum("1"));
-console.log(isNum(true));
-console.log(isNum(false));
-console.log(isNum([""]))
-console.log(isNum([]))
+
+//February 22, 2022

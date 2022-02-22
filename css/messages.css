@@ -14,6 +14,7 @@ body, html {
     background-color: lightskyblue;
     color: darkslategrey;
     border-radius: 5px;
+    opacity: 60%;
 
 }
 
@@ -25,6 +26,7 @@ body, html {
     background-color: lightgreen;
     color: darkslategrey;
     border-radius: 5px;
+    opacity: 60%;
 
 }
 
@@ -36,6 +38,7 @@ body, html {
     background-color: gold;
     color: darkslategrey;
     border-radius: 5px;
+    opacity: 60%;
 
 }
 
@@ -47,6 +50,7 @@ body, html {
     background-color: lightcoral;
     color: darkslategrey;
     border-radius: 5px;
+    opacity: 60%;
 
 
 }

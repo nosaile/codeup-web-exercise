@@ -29,23 +29,20 @@
 // }
 
 
- var cones = Math.floor(Math.random() * 50) + 50;
- do {
-     var custCones = Math.floor(Math.random() * 5) + 1;
-     var afterSale = cones-=custCones
-     console.log(cones + " is how many cones we need to sell.");
-     console.log(afterSale + " is how many cones are left now.");
-     console.log(custCones + " is how many cones they want to buy right now.");
-     afterSale;
-    }
- while(afterSale - custCones >= 0) {
-
-
-
- }
-
-
-
+ // var cones = Math.floor(Math.random() * 50) + 50;
+ // do {
+ //     var custCones = Math.floor(Math.random() * 5) + 1;
+ //     var afterSale = cones-=custCones
+ //     console.log(cones + " is how many cones we need to sell.");
+ //     console.log(afterSale + " is how many cones are left now.");
+ //     console.log(custCones + " is how many cones they want to buy right now.");
+ //     afterSale;
+ //    }
+ // while(afterSale - custCones >= 0) {
+ //
+ //
+ //
+ // }
 
 
 //
