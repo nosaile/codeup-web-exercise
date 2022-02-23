@@ -3,7 +3,7 @@
 }
 
 nav {
-    background: whitesmoke;
+    background: gainsboro;
     display: flex;
 
 }
@@ -57,7 +57,7 @@ nav a:hover {
 body {
     margin: 0;
     font-family: Roboto;
-    background: antiquewhite;
+    background: silver;
     min-height: 100vh;
 }
 
