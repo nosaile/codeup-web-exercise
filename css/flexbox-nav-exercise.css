@@ -4,14 +4,32 @@
 
 nav {
     background: #333333;
+    display: flex;
+
 }
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    font-size: 10px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 25%;
 }
+.rightside {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 25%;
+}
+
 nav a {
+
     text-decoration: none;
     color: white;
     font-family: Verdana, serif;
@@ -22,15 +40,47 @@ nav a:hover {
     background: black;
 }
 
-nav ul li:nth-child(4) {
-    margin-left: auto;
-}
+/*nav ul li:nth-child(6) {*/
+/*    margin-left: auto;*/
+/*}*/
 body {
     margin: 0;
     font-family: Roboto;
     background: whitesmoke;
     min-height: 100vh;
 }
+
+.LOGO {
+    margin: 0 auto;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, serif;
+    display: inline-block;
+    padding: 1px;
+    font-family: Wingdings;
+    font-size: 50px;
+
+
+}
+
+.search{
+    height: 15px;
+    width: 15px;
+}
+
+.cart{
+    height: 15px;
+    width: 15px;
+}
+
+.info{
+    height: 15px;
+    width: 15px;
+}
+
+
+
 
 
 
