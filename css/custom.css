@@ -5,7 +5,9 @@
 
 .jumbotron {
     background-image: url("../images/pizza.png");
+    background-size: cover;
 }
+
 
 
 .display-4 {
@@ -42,6 +44,13 @@ h2{
     color: white;
 }
 
+.container {
+    max-width: 10000px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
 
 
 
