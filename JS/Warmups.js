@@ -101,4 +101,22 @@
 // console.log(isNum([]))
 
 
-//February 22, 2022
+//February 28, 2022
+
+//attempt
+// var anArr = ["dogs", "cats", "hamsters", "goldfish"];
+// let arrVal = []
+//
+// function removeAll(arr1, []) {
+//     return toString(arr1 - val)
+//
+// }
+//
+// console.log(removeAll(arr1, "cats"));
+
+
+
+
+
+
+
