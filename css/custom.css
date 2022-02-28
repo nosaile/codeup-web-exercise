@@ -2,6 +2,7 @@
 
 
 
+
 .jumbotron {
     background-image: url("../images/pizza.png");
 }
@@ -15,10 +16,34 @@
     opacity: 70%
 
 }
+h2{
+    margin-left: 1em;
+    margin-right: 1em;
+}
 
 .input-group {
     text-align: center;
 }
+
+.btn-primary {
+    background-color: white;
+    border-color: white;
+
+}
+
+.tab-content {
+    margin: 1em;
+    margin-bottom: 2em;
+}
+
+.btn-group > .btn{
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+
+
 
 
 
