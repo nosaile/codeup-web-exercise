@@ -1,0 +1,27 @@
+
+
+
+
+.jumbotron {
+    background-image: url("../images/pizza.png");
+}
+
+
+.display-4 {
+
+    width: 100%;
+    text-align: center;
+    background: white;
+    opacity: 70%
+
+}
+
+.input-group {
+    text-align: center;
+}
+
+
+
+
+
+
