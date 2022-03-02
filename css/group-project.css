@@ -1,0 +1,89 @@
+body {
+    font-family: 'Abel', sans-serif;
+    background: #f0f0f0;
+}
+
+:root {
+    --red: #e6563b;
+    --green: #7cb06c;
+    --yellow: #EB9D3A;
+    --blue: #00aba9;
+}
+nav a {
+    font-size: .75em;
+    color: black;
+}
+
+.nav-background {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 59px;
+    width: 100%;
+    top: 37px;
+    z-index: -1000;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid white;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    margin: 1vw;
+}
+
+.circle h6 {
+    margin: 0;
+}
+.small-circles {
+    height: 18px;
+    width: 18px;
+    border-radius: 18px;
+    font-size: 8px;
+    line-height: 18px;
+    font-family: 'Anton', sans-serif;
+    margin-left: 1em;
+}
+.small-circles span{
+    position: relative;
+    top: 1px;
+}
+nav .nav-item {
+    position: relative;
+    bottom: 6px;
+}
+.small-circles span{
+    position: relative;
+    top: 1px;
+}
+.sub-title {
+    text-align: center;
+    margin-top: 5em;
+}
+
+
+.red {background-color: var(--red);}
+.blue {background-color: var(--blue);}
+.yellow {background-color: var(--yellow);}
+.green {background-color: var(--green);}
+
+@media screen and (min-width: 768px) {
+    .sub-title {margin-top: 2em;}
+    hr {width: 55%}
+}
+
+@media screen and ( min-width: 992px){
+    .sub-title {text-align: left;}
+    hr{width: 100%}
+}
+
+@media screen and (min-width:1200px){
+    .wrapper .row {margin-top:3em;}
+    .custom-card {padding-right: 3em;}
+    hr {width: 100%}
+}
