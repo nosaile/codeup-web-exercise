@@ -1,6 +1,15 @@
+/*Start of Style For Nav bar and circle colors transp*/
+
 body {
     font-family: 'Abel', sans-serif;
-    background: #f0f0f0;
+    background: blanchedalmond;
+    /*Background color code is red*/
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 :root {
@@ -9,6 +18,45 @@ body {
     --yellow: #EB9D3A;
     --blue: #00aba9;
 }
+
+/*Start of header and title styles*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Anton', sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+h5 {
+    font-size: 1.75em;
+}
+
+.brand-name {
+    font-size: 1.75em;
+}
+
+/*End of title and header sizes */
+
+/*:root can be useful for declaring global CSS variables*/
+
 nav a {
     font-size: .75em;
     color: black;
@@ -24,13 +72,30 @@ nav a {
     z-index: -1000;
 }
 
+nav .nav-item {
+    position: relative;
+    bottom: 6px;
+}
+
+
+/*Ending For style on nav section*/
+
+.tweet i {
+    font-size: 2em;
+    margin-right: .3em;
+    position: relative;
+    top: .4em;
+    color: rgb(27 160 239);
+}
+
+/*Large Circles for nav bar*/
 .circle {
     width: 100px;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 5px solid white;
+    border: 5px solid black;
     border-radius: 50px;
     color: white;
     text-align: center;
@@ -40,6 +105,29 @@ nav a {
 .circle h6 {
     margin: 0;
 }
+
+.red {
+    background-color: var(--red);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+
+/*Ending of Style for large circles*/
+
+
+/*Small circles for images 4 div containers*/
+
 .small-circles {
     height: 18px;
     width: 18px;
@@ -49,41 +137,91 @@ nav a {
     font-family: 'Anton', sans-serif;
     margin-left: 1em;
 }
-.small-circles span{
+
+.small-circles span {
     position: relative;
     top: 1px;
 }
-nav .nav-item {
-    position: relative;
-    bottom: 6px;
+
+/*Ending Style for Small circles*/
+
+/*Fixing Images sizing connected to HTML Invisible 100*/
+/*Start of Image Work Everything here effect Style of image*/
+
+.images-ipad {
+    background-image: url("../imgs/assets/images/ipad.jpg")
 }
-.small-circles span{
-    position: relative;
-    top: 1px;
+
+.images-macs {
+    background-image: url("../imgs/assets/images/macbook.jpg")
 }
-.sub-title {
-    text-align: center;
-    margin-top: 5em;
+
+.images-man {
+    background-image: url("../imgs/assets/images/man.jpg")
+}
+
+.images-security {
+    background-image: url("../imgs/assets/images/security.jpg")
 }
 
 
-.red {background-color: var(--red);}
-.blue {background-color: var(--blue);}
-.yellow {background-color: var(--yellow);}
-.green {background-color: var(--green);}
+.Images {
+    max-width: 100%;
+    border: .5em solid black;
+    border-radius: 4px;
+    background-size: auto;
+
+}
+
+.small-Images {
+    border: .2em solid black;
+    border-radius: 1px;
+    background-size: 50%;
+}
+
+/*End Of Image Style Work*/
+
+
+/*Breaking point for all Media in this Section */
 
 @media screen and (min-width: 768px) {
-    .sub-title {margin-top: 2em;}
-    hr {width: 55%}
+    .sub-title {
+        margin-top: 2em;
+    }
+
+    hr {
+        width: 55%
+    }
 }
 
-@media screen and ( min-width: 992px){
-    .sub-title {text-align: left;}
-    hr{width: 100%}
+@media screen and ( min-width: 992px) {
+    .sub-title {
+        text-align: left;
+    }
+
+    .wrapper .row {margin-top:.90em;}
+
+    hr {
+        width: 100%
+    }
 }
 
-@media screen and (min-width:1200px){
-    .wrapper .row {margin-top:3em;}
-    .custom-card {padding-right: 3em;}
-    hr {width: 100%}
+@media screen and (min-width: 1200px) {
+    /*.wrapper .row {*/
+    /*     margin-top: 1.75em;*/
+    /* }*/
+
+    .custom-card {
+        padding-right: 3em;
+    }
+
+    hr {
+        width: 100%
+    }
 }
+
+/*End Of Media Section*/
+
+
+/*https://designmodo.com/bootstrap-5-utilities/*/
+/*Bootstrap index keywords, proper usage*/
