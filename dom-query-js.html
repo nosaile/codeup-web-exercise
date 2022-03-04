@@ -26,29 +26,40 @@
 </p>
 
 <script>
-    (function() {
+    (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById('main-header');
-        console.log(mainHeader.innerHTML)
+        console.log(mainHeader)
 
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         mainHeader.innerHTML = "Javascript is Cool"
+        console.log(mainHeader)
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
-        console.log(subHeader.innerHTML)
+        console.log(subHeader)
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "#0000ff"
+        subHeader.style.color = "#0000ff";
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByName("")
-        console.log(li.innerHTML)
+        var listItems = document.getElementsByTagName('li');
+        for (var i = 0; i < listItems.length; i++) {
+            listItems[i].style.color ="gray";
+            console.log(listItems[i]);
+        }
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
+
+
+        // TODO: Set text color on every other list item to grey #808080
+
+
+
+
+
+            // TODO: Set text color of li with dbid = 1 to blue
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // var subParagraphs = ;
