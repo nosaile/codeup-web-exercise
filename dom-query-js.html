@@ -24,25 +24,35 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id="btn1">Click Me to change the main header!</button>
+<button id="btn2">Click Me to change subheader color!</button>
+<button id="btn3">click me to do something else!</button>
+<button id="btn4">Click Me to change paragraph!</button>
+
 
 <script>
+
+
+
+
+
     (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById('main-header');
-        console.log(mainHeader)
+
 
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "Javascript is Cool"
-        console.log(mainHeader)
+        // mainHeader.innerHTML = "Javascript is Cool"
+
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
-        console.log(subHeader)
+
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "#0000ff";
+        // subHeader.style.color = "#0000ff";
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
@@ -52,14 +62,14 @@
 
 
         // TODO: Set text color on every other list item to grey #808080
-        var li = document.getElementsByTagName('li');
-        for (i = 0; i < li.length; i++) {
-            if (i % 2 === 0)
-                li[i].style.color = 'grey';
-            if (li[i].getAttribute("data-dbid") == 1){
-                li[i].style.color = 'blue'
-            }
-        }
+        // var li = document.getElementsByTagName('li');
+        // for (i = 0; i < li.length; i++) {
+        //     if (i % 2 === 0)
+        //         li[i].style.color = 'grey';
+        //     if (li[i].getAttribute("data-dbid") == 1){
+        //         li[i].style.color = 'blue'
+        //     }
+        // }
 
 
         // TODO: Set text color of li with dbid = 1 to blue
@@ -70,12 +80,37 @@
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
-        console.log(subParagraphs)
+
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!"
-        console.log(subParagraphs)
+        // subParagraphs[0].innerHTML = "Mission Accomplished!"
 
+        var btn1 = function (click) {
+            mainHeader.innerHTML = "Javascript is Cool!"
+        }
+        document.getElementById('btn1').addEventListener('click', btn1);
+
+        var btn2 = function (click) {
+            subHeader.style.color = "#0000ff";
+        }
+        document.getElementById('btn2').addEventListener('click', btn2);
+
+        var btn3 = function (click) {
+            var li = document.getElementsByTagName('li');
+            for (i = 0; i < li.length; i++) {
+                if (i % 2 === 0)
+                    li[i].style.color = 'grey';
+                if (li[i].getAttribute("data-dbid") == 1){
+                    li[i].style.color = 'blue'
+                }
+            };
+        }
+        document.getElementById('btn3').addEventListener('click', btn3);
+
+        var btn4 = function (click) {
+            subParagraphs[0].innerHTML = "Mission Accomplished!";
+        }
+        document.getElementById('btn4').addEventListener('click', btn4);
 
     })();
 </script>
