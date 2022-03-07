@@ -47,24 +47,35 @@
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
         for (var i = 0; i < listItems.length; i++) {
-            listItems[i].style.color ="gray";
             console.log(listItems[i]);
         }
 
 
-
         // TODO: Set text color on every other list item to grey #808080
+        var li = document.getElementsByTagName('li');
+        for (i = 0; i < li.length; i++) {
+            if (i % 2 === 0)
+                li[i].style.color = 'grey';
+            if (li[i].getAttribute("data-dbid") == 1){
+                li[i].style.color = 'blue'
+            }
+        }
 
 
+        // TODO: Set text color of li with dbid = 1 to blue
+        // li[0].style.color = '#0000ff'
 
 
-
-            // TODO: Set text color of li with dbid = 1 to blue
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        console.log(subParagraphs)
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        subParagraphs[0].innerHTML = "Mission Accomplished!"
+        console.log(subParagraphs)
+
+
     })();
 </script>
 </body>
