@@ -41,11 +41,12 @@ $(document).ready(function() {
         alert("kool-nami");
         $("body").css("background-image", "url(../images/koolaid.gif)");
         audio.play();
-        $('.flasher');
+
 
 
     });
 });
+
 
 
 
