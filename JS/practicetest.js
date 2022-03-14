@@ -26,19 +26,11 @@ $(document).ready(function () {
     // $('#list-chars-btn').click(function (){
     //     let userInput = $('#characters').val();
     $('#list-chars-btn').click(function () {
-
         let userInput = $('#characters').val();
-
-        let splitter = [userInput.split("")];
-
-
-        for (let i = 0; i < splitter.length; i++) {
-
-        }
-
-        let listItem = splitter[i];
-
-        $('#characters-list').append('<li>' + listItem + '</li>');
+        let splitter = userInput.split("");
+        let newArr = [];
+        newArr.push(splitter)
+        $('#characters-list').append('<li>' + splitter + '</li>');
         return false;
 
     });
