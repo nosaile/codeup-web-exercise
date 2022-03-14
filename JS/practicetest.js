@@ -23,6 +23,25 @@ $(document).ready(function () {
     }, 1000);
 
 
+    // $('#list-chars-btn').click(function (){
+    //     let userInput = $('#characters').val();
+    $('#list-chars-btn').click(function () {
+
+        let userInput = $('#characters').val();
+
+        let splitter = [userInput.split("")];
+
+
+        for (let i = 0; i < splitter.length; i++) {
+
+        }
+
+        let listItem = splitter[i];
+
+        $('#characters-list').append('<li>' + listItem + '</li>');
+        return false;
+
+    });
 
 
 });
