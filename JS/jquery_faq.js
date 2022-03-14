@@ -17,18 +17,13 @@ $(document).ready(function () {
 
     $('dd').addClass('invisible');
 
-    $('.invisible').css('visibility', 'hidden' );
+    $('.invisible').css('visibility', 'hidden');
 
-    $('button').addClass('btn1');
-
-
-    $('.btn1').click(function (){
-        $('dd').toggleClass('invisible')
+    $('button').click(function () {
+        $('dd').toggleClass('invisible');
 
 
     });
-
-
 
 
 });
