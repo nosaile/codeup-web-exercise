@@ -6,7 +6,7 @@ $(document).ready(function () {
         '<dt>Park 2</dt><dd>A very weird place.</dd>' +
         '<dt>Park 3</dt><dd>A very fun place.</dd>' +
         '<dt>Park 4</dt><dd>A very awesome place.</dd>' +
-        '<button>hide/show</button>' +
+        '<button id="hideshow">hide/show</button>' +
         '<h3 id="national-parks-heading">Great Smokey Mountains</h3>' +
         '<ul id="federal">' +
         '    <li>very cool</li>' +
@@ -31,8 +31,9 @@ $(document).ready(function () {
 
     $('.invisible').css('visibility', 'hidden');
 
-    $('button').click(function () {
-        $('dd').toggleClass('invisible');
+    $('#hideshow').click(function () {
+        $('dd').toggle('').css('visibility', 'visible');
+
     });
 
     $('.btn').click(function () {
