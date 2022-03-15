@@ -33,7 +33,9 @@ $(document).ready(function () {
 
     $('#hideshow').click(function () {
         $('dd').toggle('').css('visibility', 'visible');
-
+    });
+    $('dt').click(function(){
+        $(this).css('background', 'yellow');
     });
 
     $('.btn').click(function () {
@@ -45,13 +47,12 @@ $(document).ready(function () {
     });
 
 
-    $('#federal').click(function () {
+
+
+    $('ul').click(function () {
         $('li:nth-child(1)').css('color', 'blue');
     });
 
-    $('#states').click(function () {
-        $('li').first.css('color', 'blue');
-    });
 
 
 });
