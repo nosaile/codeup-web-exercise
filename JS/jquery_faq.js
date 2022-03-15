@@ -44,8 +44,13 @@ $(document).ready(function () {
         $('li').css('font-weight', 'bold')
     });
 
-    $('ul').click(function () {
-        $('li:nth-child(1)').css('color', 'blue')
+
+    $('#federal').click(function () {
+        $('li:nth-child(1)').css('color', 'blue');
+    });
+
+    $('#states').click(function () {
+        $('li').first.css('color', 'blue');
     });
 
 
