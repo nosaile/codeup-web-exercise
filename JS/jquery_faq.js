@@ -6,13 +6,25 @@ $(document).ready(function () {
         '<dt>Park 2</dt><dd>A very weird place.</dd>' +
         '<dt>Park 3</dt><dd>A very fun place.</dd>' +
         '<dt>Park 4</dt><dd>A very awesome place.</dd>' +
-        '<dt>Park 5</dt><dd>A very hot place.</dd>' +
-        '<dt>Park 6</dt><dd>A very relaxed place.</dd>' +
-        '<dt>Park 7</dt><dd>A very interesting place.</dd>' +
-        '<dt>Park 8</dt><dd>A very dark place.</dd>' +
-        '<dt>Park 9</dt><dd>A very cold place.</dd>' +
-        '<dt>Park 10</dt><dd>A very crazy place.</dd></dl>' +
-        '<button>hide/show</button>');
+        '<button>hide/show</button>' +
+        '<h3 id="national-parks-heading">Great Smokey Mountains</h3>' +
+        '<ul id="federal">' +
+        '    <li>very cool</li>' +
+        '    <li>a lot of fun</li>' +
+        '    <li>so many trees!</li>' +
+        '    <li>bears!</li>' +
+        '    <li>deer!</li>' +
+        '</ul>' +
+        '<h3>State Parks of Texas</h3>' +
+        '<ul id="states">' +
+        '    <li>Abilene</li>' +
+        '    <li>Big Bend</li>' +
+        '    <li>Choke Canyon</li>' +
+        '    <li>Davis Mountains</li>' +
+        '    <li>Enchanted Rock</li>' +
+        '</ul>' +
+        '<button class="btn" id="btn1">yellowify</button>'
+    );
 
 
     $('dd').addClass('invisible');
@@ -21,8 +33,18 @@ $(document).ready(function () {
 
     $('button').click(function () {
         $('dd').toggleClass('invisible');
+    });
 
+    $('.btn').click(function () {
+        $('li:nth-child(5)').css('background-color', 'yellow');
+    });
 
+    $('h3').click(function () {
+        $('li').css('font-weight', 'bold')
+    });
+
+    $('ul').click(function () {
+        $('li:nth-child(1)').css('color', 'blue')
     });
 
 
