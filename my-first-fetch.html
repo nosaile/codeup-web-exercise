@@ -6,28 +6,38 @@
     <script src="js/jquery-3.6.0.js"></script>
 </head>
 <body>
-<div id="weather">
-
-</div>
-
+<!--dont forget to uncomment below for weather api-->
+<!--<div id="weather">-->
+<!--</div>-->
+<div id="tts"></div>
 
 <script src="js/keys.js"></script>
 <script>
     // DO FETCH STUFF
-    fetch('https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&units=imperial&appid=' + OWM_KEY)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            let html = "";
-            html += '<h1>Your Weather for the next 5 days</h1>';
-            for (let i = 0; i < 5; i++) {
-                let dailyTemp = data.daily[i].temp.day
-                html += '<p> Day ' + [i + 1] + '</p>';
-                html += '<p>' + dailyTemp + ' Fahrenheit</p>';
-                html += '<hr>';
-            }
-            $('#weather').html(html)
-        });
+    // fetch('https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&units=imperial&appid=' + OWM_KEY)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data)
+    //         let html = '';
+    //         html += '<h1>Your Weather for the next 5 days</h1>';
+    //         for (let i = 0; i < 5; i++) {
+    //             let dailyTemp = data.daily[i].temp.day
+    //             html += '<p> Day ' + [i + 1] + '</p>';
+    //             html += '<p>' + dailyTemp + ' Fahrenheit</p>';
+    //             html += '<hr>';
+    //         }
+    //         $('#weather').html(html)
+    //     });
+
+    //api exercise below
+
+    fetch('https://api.voicerss.org/?key=' + TTS_KEY + '&hl=en-us&v=Amy&src=Hello,world!')
+        .then(response => console.log(response));
+    let html = '';
+    html += '<h1>Lets do some text-to-speech</h1>'
+
+$('#tts').html(html)
+
 </script>
 </body>
 </html>
