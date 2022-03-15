@@ -38,20 +38,37 @@ $(document).ready(function () {
         $(this).css('background', 'yellow');
     });
 
-    $('.btn').click(function () {
-        $('li:nth-child(5)').css('background-color', 'yellow');
+    // $('.btn').click(function () {
+    //     $('li:nth-child(5)').css('background-color', 'yellow');
+    // });
+
+    $('.btn').click(function (){
+        $('ul').each(function (){
+            $(this).children().last().css('background-color', 'yellow');
+        });
     });
 
     $('h3').click(function () {
         $('li').css('font-weight', 'bold')
     });
 
+    // $('ul').click(function () {
+    //     $('li:nth-child(1)').css('color', 'blue');
+    // });
 
-
-
-    $('ul').click(function () {
-        $('li:nth-child(1)').css('color', 'blue');
+    $('#federal').click(function (){
+        $('#federal').each(function (){
+            $(this).children().first().css('color', 'blue')
+        });
     });
+
+    $('#states').click(function (){
+        $('#states').each(function (){
+            $(this).children().first().css('color', 'blue')
+        });
+    });
+
+
 
 
 
