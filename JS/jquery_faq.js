@@ -56,16 +56,20 @@ $(document).ready(function () {
     //     $('li:nth-child(1)').css('color', 'blue');
     // });
 
-    $('#federal').click(function (){
-        $('#federal').each(function (){
-            $(this).children().first().css('color', 'blue')
-        });
-    });
+    // $('#federal').click(function (){
+    //     $('#federal').each(function (){
+    //         $(this).children().first().css('color', 'blue')
+    //     });
+    // });
+    //
+    // $('#states').click(function (){
+    //     $('#states').each(function (){
+    //         $(this).children().first().css('color', 'blue')
+    //     });
+    // });
 
-    $('#states').click(function (){
-        $('#states').each(function (){
-            $(this).children().first().css('color', 'blue')
-        });
+    $('li').click(function (){
+        $(this).parent().children().first().css('color', 'blue');
     });
 
 
