@@ -35,21 +35,27 @@
         .then(response => response.json())
         .then(data => {
             console.log(data.response)
-            let y = Math.floor(Math.random() * (480))
+            let y = Math.floor(Math.random() * (492))
             console.log(data.response.holidays[y])
-            let holName = data.response.holidays[y].name;
-            let holDesc = data.response.holidays[y].description;
-            let holDate = data.response.holidays[y].date.iso;
-            let holType = data.response.holidays[y].type;
+            let holDay = {
+                holName: data.response.holidays[y].name,
+                holDesc: data.response.holidays[y].description,
+                holDate: data.response.holidays[y].date.iso,
+                holType: data.response.holidays[y].type
+            }
             let html = '';
             html += '<h1>Holiday Data</h1>' +
                 '<input id="userEntry" placeholder="YYYY-MM-DD">' +
-                '<button id="userentry">search by date</button>' +
-                '<p> Title: ' + holName + '<br>' + ' Description: ' + holDesc + '<br>' + 'Date: ' + holDate + '<br>' + 'Type: ' + holType + '</p>' +
+                '<button id="user-entry">search by date</button>' +
+                '<p> Title: ' + holDay.holName + '<br>' + ' Description: ' + holDay.holDesc + '<br>' + 'Date: ' + holDay.holDate + '<br>' + 'Type: ' + holDay.holType + '</p>' +
                 '<br>' +
                 '<button>click for a new holiday</button>';
 
             $('#holidays').html(html)
+
+            $('#user-entry').click(function () {
+                $('#userEntry').val()
+            });
 
             $('button').click(function () {
                 location.reload();
