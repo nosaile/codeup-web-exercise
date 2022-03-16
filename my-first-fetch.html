@@ -9,12 +9,13 @@
 <!--dont forget to uncomment below for weather api-->
 <!--<div id="weather">-->
 <!--</div>-->
-<div id="tts"></div>
+<div id="holidays"></div>
+<!--<div id="#nasa"></div>-->
 
 <script src="js/keys.js"></script>
 <script>
-    // DO FETCH STUFF
-    // fetch('https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&units=imperial&appid=' + OWM_KEY)
+    // // DO FETCH STUFF
+    // fetch('https://api.openweathermap.org/data/2.5/onecall?lat=32.75&lon=-97.33&units=imperial&appid=' + OWM_KEY)
     //     .then(response => response.json())
     //     .then(data => {
     //         console.log(data)
@@ -29,14 +30,32 @@
     //         $('#weather').html(html)
     //     });
 
-    //api exercise below
+    // holiday api below
+    fetch('https://calendarific.com/api/v2/holidays?api_key=' + HOLIDAY_KEY + '&country=US&year=2022')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.response)
+            let y = Math.floor(Math.random() * (480))
+            console.log(data.response.holidays[y])
+            let holName = data.response.holidays[y].name;
+            let holDesc = data.response.holidays[y].description;
+            let holDate = data.response.holidays[y].date.iso;
+            let holType = data.response.holidays[y].type;
+            let html = '';
+            html += '<h1>Holiday Data</h1>' +
+                '<input id="userEntry" placeholder="YYYY-MM-DD">' +
+                '<button id="userentry">search by date</button>' +
+                '<p> Title: ' + holName + '<br>' + ' Description: ' + holDesc + '<br>' + 'Date: ' + holDate + '<br>' + 'Type: ' + holType + '</p>' +
+                '<br>' +
+                '<button>click for a new holiday</button>';
 
-    fetch('https://api.voicerss.org/?key=' + TTS_KEY + '&hl=en-us&v=Amy&src=Hello,world!')
-        .then(response => console.log(response));
-    let html = '';
-    html += '<h1>Lets do some text-to-speech</h1>'
+            $('#holidays').html(html)
 
-$('#tts').html(html)
+            $('button').click(function () {
+                location.reload();
+            });
+        });
+
 
 </script>
 </body>
