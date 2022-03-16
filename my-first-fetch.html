@@ -31,12 +31,11 @@
     //     });
 
     // holiday api below
-    fetch('https://calendarific.com/api/v2/holidays?api_key=' + HOLIDAY_KEY + '&country=US&year=2022')
+    fetch('https://calendarific.com/api/v2/holidays?api_key=' + HOLIDAY_KEY + '&country=US&year=2010')
         .then(response => response.json())
         .then(data => {
-            console.log(data.response)
-            let y = Math.floor(Math.random() * (492))
-            console.log(data.response.holidays[y])
+            let y = Math.floor(Math.random() * (data.response.holidays.length))
+
             let holDay = {
                 holName: data.response.holidays[y].name,
                 holDesc: data.response.holidays[y].description,
@@ -45,20 +44,21 @@
             }
             let html = '';
             html += '<h1>Holiday Data</h1>' +
-                '<input id="userEntry" placeholder="YYYY-MM-DD">' +
-                '<button id="user-entry">search by date</button>' +
-                '<p> Title: ' + holDay.holName + '<br>' + ' Description: ' + holDay.holDesc + '<br>' + 'Date: ' + holDay.holDate + '<br>' + 'Type: ' + holDay.holType + '</p>' +
+                '<input id="year" placeholder="search by year"> ' +
+                '<button id="year-entry">search</button>' +
+                '<p> Title: ' + holDay.holName + '<br>' +
+                ' Description: ' + holDay.holDesc + '<br>' +
+                'Date: ' + holDay.holDate + '<br>' +
+                'Type: ' + holDay.holType + '</p>' +
                 '<br>' +
-                '<button>click for a new holiday</button>';
+                '<button>click for a new random holiday</button>';
 
-            $('#holidays').html(html)
 
-            $('#user-entry').click(function () {
-                $('#userEntry').val()
-            });
+            $('#holidays').html(html);
+
 
             $('button').click(function () {
-                location.reload();
+                location.reload()
             });
         });
 
