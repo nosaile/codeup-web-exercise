@@ -14,7 +14,7 @@
 
 <script src="js/keys.js"></script>
 <script>
-    // // DO FETCH STUFF
+    // DO FETCH STUFF
     // fetch('https://api.openweathermap.org/data/2.5/onecall?lat=32.75&lon=-97.33&units=imperial&appid=' + OWM_KEY)
     //     .then(response => response.json())
     //     .then(data => {
@@ -31,7 +31,7 @@
     //     });
 
     // holiday api below
-    fetch('https://calendarific.com/api/v2/holidays?api_key=' + HOLIDAY_KEY + '&country=US&year=2019')
+    fetch('https://calendarific.com/api/v2/holidays?api_key=' + HOLIDAY_KEY + '&country=US&year=2022')
         .then(response => response.json())
         .then(data => {
             let y = Math.floor(Math.random() * (data.response.holidays.length))
@@ -42,6 +42,8 @@
                 holDate: data.response.holidays[y].date.iso,
                 holType: data.response.holidays[y].type
             }
+            console.log(data.response.holidays)
+            console.log(holDay);
             let html = '';
             html += '<h1>Holiday Data</h1>' +
                 '<input id="year" placeholder="search by year"> ' +
@@ -53,9 +55,7 @@
                 '<br>' +
                 '<button>-- click for a new day --</button>';
 
-
             $('#holidays').html(html);
-
 
             $('button').click(function () {
                 location.reload()
