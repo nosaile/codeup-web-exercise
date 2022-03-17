@@ -33,3 +33,4 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat=32.75&lon=-97.33&unit
         $('#weather').html(html)
     });
 
+
