@@ -27,18 +27,31 @@
         .then(data => {
             console.log(data)
             let html = '';
-            html += '<h1 style="text-align: center">Your Weather for the next 5 days</h1>' +
+            html += '<h3 style="text-align: center">Weather Forecast</h3>' +
                 '<div class="row">';
             for (let i = 0; i < 5; i++) {
                 let dailyTemp = data.daily[i].temp.day
-                html += '<p> Day ' + [i + 1] + '</p>';
-                html += '<p>' + Math.floor(dailyTemp) + 'º</p>';
-                html += '<hr>';
+                html += '<p> Day ' + [i + 1] + '</p>'+
+                 '<p>' + Math.floor(dailyTemp) + 'º</p>'+
+                 '<hr>';
+
             }
+
+            for (let i = 0; i < 12; i++) {
+               let hourlyTemp = data.hourly[i].temp
+                html += '<div class="hourly">' +
+                 '<p>'+ hourlyTemp +  '</p>' +
+                    '</div>';
+
+            };
+            html += '<button id="hourly">hourly forecast</button>';
+
+                
             html += '</div>'
             $('#weather').html(html)
             let lat = data.lat;
             let lon = data.lon;
+            $('')
 
             mapboxgl.accessToken = MBX_KEY;
     const map = new mapboxgl.Map({

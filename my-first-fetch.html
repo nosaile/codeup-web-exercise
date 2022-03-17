@@ -31,7 +31,7 @@
     //     });
 
     // holiday api below
-    fetch('https://calendarific.com/api/v2/holidays?api_key=' + HOLIDAY_KEY + '&country=US&year=2010')
+    fetch('https://calendarific.com/api/v2/holidays?api_key=' + HOLIDAY_KEY + '&country=US&year=2019')
         .then(response => response.json())
         .then(data => {
             let y = Math.floor(Math.random() * (data.response.holidays.length))
