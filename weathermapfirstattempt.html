@@ -10,6 +10,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Mapbox CSS -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <script src="js/jquery-3.6.0.js"></script>
     <!-- Custom CSS -->
     <style>
@@ -33,6 +34,7 @@
         }
     </style>
     <script src="js/weathermapfirstattempt.js"></script>
+    <script src="js/geocoder-utils.js"></script>
 </head>
 <body>
 <h1 style="height: 10%">Weather Map</h1>
@@ -43,7 +45,7 @@
     <div id="weather" class="row justify-content-around"></div>
 </div>
 <!-- Mapbox JS -->
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
 <!-- Load the `mapbox-gl-geocoder` plugin. -->
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet"

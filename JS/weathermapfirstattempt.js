@@ -14,25 +14,36 @@ var lon = -97;
 newWeather(lat, lon)
 
 function newWeather(lat, lon) {
-theMap(lat, lon)
+    theMap(lat, lon)
 
-function theMap(lat, lon) {
-    mapboxgl.accessToken = MBX_KEY;
-    let map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
-        zoom: 8,
-        center: [lon, lat]
-    });
+    function theMap(lat, lon) {
+        mapboxgl.accessToken = MBX_KEY;
+        let map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/dark-v10',
+            zoom: 8,
+            center: [lon, lat]
+        });
 
 //mapbox geo coder
 
-    map.addControl(
-        new MapboxGeocoder({
-            accessToken: mapboxgl.accessToken,
-            mapboxgl: mapboxgl
-        })
-    );
+        map.addControl(
+            new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl,
+
+            })
+        );
+        geocode("Ft Worth", MBX_KEY).then(function (coord) {
+            console.log(coord);
+            lat = coord[1];
+            lon = coord [0];
+
+
+            map.setCenter(coord);
+            map.setZoom(10);
+        });
+
 
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${OWM_KEY}`)
             .then(response => response.json())
@@ -60,6 +71,7 @@ function theMap(lat, lon) {
                     '<div class="col-3"><input id="searchlon" placeholder="longitude"></div>' +
                     '<button class="col-4" id="search-submit">submit</button>' +
                     '</div>'
+
                 $('#weather').html(html)
                 $('#search-submit').click(function () {
                     lat = $('#searchlat').val();
