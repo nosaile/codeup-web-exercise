@@ -10,9 +10,10 @@ var lat = 32.75;
 var lon = -97;
 
 
-
-
 //map box
+newWeather(lat, lon)
+
+function newWeather(lat, lon) {
 theMap(lat, lon)
 
 function theMap(lat, lon) {
@@ -31,15 +32,7 @@ function theMap(lat, lon) {
             accessToken: mapboxgl.accessToken,
             mapboxgl: mapboxgl
         })
-
     );
-
-
-
-    newWeather(lat, lon)
-
-    function newWeather(lat, lon) {
-
 
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${OWM_KEY}`)
             .then(response => response.json())
