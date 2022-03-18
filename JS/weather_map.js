@@ -23,6 +23,7 @@ function theMap(lat, lon) {
         zoom: 8,
         center: [lon, lat]
     });
+
 //mapbox geo coder
 
     map.addControl(
@@ -30,7 +31,9 @@ function theMap(lat, lon) {
             accessToken: mapboxgl.accessToken,
             mapboxgl: mapboxgl
         })
+
     );
+
 
 
     newWeather(lat, lon)
@@ -79,7 +82,7 @@ function theMap(lat, lon) {
 }
 
 
-//
+
 
 
 

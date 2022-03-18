@@ -39,11 +39,11 @@ function myFunction(restaurant) {
     markerPopup()
 }
 
-//markers
+
 function markerPopup() {
     for (let i = 0; i < restrauntInfo().length; i++) {
-
         let restraunt = restrauntInfo();
+        //markers
         var marker = new mapboxgl.Marker({
             color: 'green'
         })
@@ -56,7 +56,3 @@ function markerPopup() {
         marker.setPopup(popup)
     }
 }
-
-let html = '';
-
-$('#footer').html(html)
