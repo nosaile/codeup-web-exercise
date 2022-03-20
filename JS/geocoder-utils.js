@@ -16,16 +16,15 @@
 function geocode(search, token) {
     var baseUrl = 'https://api.mapbox.com';
     var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + MBX_KEY)
         .then(function(res) {
             return res.json();
             // to get all the data from the request, comment out the following three lines...
-        }).then(function(data) {
-            return data.features[0].center;
-        });
-}
+        // }).then(function(data) {
+        //     return data.features[0].center;
+        // });
 
-
+})
 /***
  * reverseGeocode is a method to search for a physical address based on inputted coordinates
  * @param {object} coordinates is an object with properties "lat" and "lng" for latitude and longitude
@@ -49,5 +48,4 @@ function reverseGeocode(coordinates, token) {
         // to get all the data from the request, comment out the following three lines...
         .then(function(data) {
             return data.features[0].place_name;
-        });
-}
+        });}}

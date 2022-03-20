@@ -5,7 +5,6 @@ var lat = 33;
 var lon = -97;
 var userSearch;
 let geocoder;
-let marker;
 let popup;
 
 
@@ -23,19 +22,22 @@ map.addControl(
         mapboxgl: mapboxgl
     })
 );
-console.log()
-console.log()
-geocode("Ft Worth", MBX_KEY).then(function (coord) {
+
+
+geocode("dallas", MBX_KEY).then(function (coord) {
     console.log(coord);
     lat = coord[1]
     lon = coord [0]
     map.setCenter(coord);
     map.setZoom(10);
 });
+console.log(lat)
+console.log(lon)
 
 
 
 
+//
 //
 // function restrauntInfo() {
 //     return [{

@@ -1,14 +1,15 @@
 //weather box data
 
-
-var lat = 32.75;
-var lon = -97;
 var anyInput = 'Ft Worth';
-var coords = [lon, lat];
-var searcher = coords;
+var lat = 32.7532;
+var lon = -97.3327;
+
+
+
 
 
 //map box
+
 newWeather(lat, lon)
 
 
@@ -30,7 +31,7 @@ function newWeather(lat, lon) {
         var marker = new mapboxgl.Marker({
             container: 'map',
             draggable: true,
-            center: coords
+            center: [lon, lat]
         })
             .setLngLat([lon, lat])
             .addTo(map);
@@ -55,14 +56,14 @@ function newWeather(lat, lon) {
 
         geocode(anyInput, MBX_KEY).then(function (result) {
             searcher = result.features[0].center
-            console.log(searcher)
             marker = new mapboxgl.Marker({
                 container: 'map',
                 draggable: true,
-                center: coords
+                center: [lon, lat]
             })
                 .setLngLat([searcher[0], searcher[1]])
                 .addTo(map);
+
 
 
         })
@@ -90,23 +91,19 @@ function newWeather(lat, lon) {
                     html += '</div>'
                 }
 
-                html += '<div class="form-control bg-secondary row" style="width: 25%; border-color: #EB9D3A; border-style: solid" id="searchers">' +
-                    '<div class="col-3"><input id="searchlat" placeholder="latitude"></div>' +
-                    '<div class="col-3"><input id="searchlon" placeholder="longitude"></div>' +
-                    '<button class="col-4" id="search-submit">submit</button>' +
-                    '</div>'
-
-
-                $('#weather').html(html)
-                $('#search-submit').click(function () {
-                    lat = $('#searchlat').val();
-                    lon = $('#searchlon').val();
+                $('.mapboxgl-ctrl-geocoder--input').mouseleave(function () {
                     anyInput = $('.mapboxgl-ctrl-geocoder--input').val()
-                    newWeather(lat, lon)
-                    theMap(lat, lon)
+                    newWeather(searcher[1], searcher[0])
+                    theMap(searcher[1], searcher[0])
 
 
                 });
+
+
+                $('#weather').html(html)
+
+
+
 
 
             });
