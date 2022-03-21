@@ -45,12 +45,7 @@ function newWeather(lat, lon) {
         );
 
 
-        geocode(anyInput, MBX_KEY).then(function (result) {
 
-            searcher = result
-
-
-        })
 
        var marker = new mapboxgl.Marker({
             color: "green",
@@ -78,7 +73,10 @@ function newWeather(lat, lon) {
         map.on('click', add_marker);
 
 
-        //get dragging to update weather
+        geocode(anyInput, MBX_KEY).then(function (result) {
+            searcher = result
+            console.log(searcher)
+        })
 
 
 
@@ -104,12 +102,15 @@ function newWeather(lat, lon) {
                     html += '</div>'
                 }
 
-                $('.mapboxgl-ctrl-geocoder--input').keyup(function () {
-                    anyInput = $('.mapboxgl-ctrl-geocoder--input').val()
-                    newWeather(searcher[1], searcher[0])
-                    theMap(searcher[1], searcher[0])
+                $('.mapboxgl-ctrl-geocoder--input').keypress(function (event) {
+                    if (event.keyCode === 13 || 9){
+                        anyInput = $('.mapboxgl-ctrl-geocoder--input').val()
+                        newWeather(searcher[1], searcher[0])
+                        theMap(searcher[1], searcher[0])
+                        console.log(searcher)
 
 
+                    }
                 });
 
 
