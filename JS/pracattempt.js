@@ -107,9 +107,9 @@ function renderWeatherCards(data){
             '<p> ' + dailyType + '</p>'
         html += '</div>'
     }
-    html += '<button id="theme" style="position: absolute; width: 15%;bottom: 0">Theme</button>'
+
 
     $('#weather').html(html)
 
-    $('#theme').toggleClass()
+
 }
