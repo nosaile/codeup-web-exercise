@@ -3,9 +3,7 @@
 var anyInput = 'Ft Worth';
 var lat = 32.7532;
 var lon = -97.3327;
-
-
-
+var searcher;
 
 
 //map box
@@ -37,6 +35,7 @@ function newWeather(lat, lon) {
             .addTo(map);
 
 
+
 //mapbox geo coder
 
 
@@ -47,11 +46,8 @@ function newWeather(lat, lon) {
                 mapboxgl: mapboxgl,
                 marker: true,
 
-
             })
         );
-
-
 
 
         geocode(anyInput, MBX_KEY).then(function (result) {
@@ -61,13 +57,9 @@ function newWeather(lat, lon) {
                 draggable: true,
                 center: [lon, lat]
             })
-                .setLngLat([searcher[0], searcher[1]])
-                .addTo(map);
-
 
 
         })
-
 
 
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${OWM_KEY}`)
@@ -97,13 +89,11 @@ function newWeather(lat, lon) {
                     theMap(searcher[1], searcher[0])
 
 
+
                 });
 
 
                 $('#weather').html(html)
-
-
-
 
 
             });
