@@ -17,7 +17,8 @@
 
     <style>
         body {
-            background-color: cadetblue;
+            background-image: url("images/clouds.jpeg");
+            color: yellow;
         }
 
         #map {
@@ -32,19 +33,26 @@
             bottom: 0;
             width: 100%;
             height: 40%;
-            background-color: #0fb784;
+            z-index: 100;
         }
+        .card{
+            color: yellow;
+        }
+        .card-header{
+            color: yellow;
+        }
+
     </style>
 
     <script src="js/geocoder-utils.js"></script>
 
 </head>
 <body>
-<h1 style="height: 10%">Weather Map</h1>
+<h1 style="height: 10%">Weathers</h1>
 
 <div id="map">
 </div>
-<div id='chart' class="col">
+<div id='chart' class="col ">
     <div id="weather" class="row justify-content-around"></div>
 </div>
 
