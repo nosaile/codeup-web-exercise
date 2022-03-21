@@ -52,20 +52,20 @@
 //
 //
 //
-//
-//         geocode(anyInput, MBX_KEY).then(function (result) {
-//             searcher = result.features[0].center
-//             console.log(searcher)
-//             marker = new mapboxgl.Marker({
-//                 container: 'map',
-//                 draggable: true,
-//                 center: coords
-//             })
-//                 .setLngLat([searcher[0], searcher[1]])
-//                 .addTo(map);
-//
-//
-//         })
+
+        geocode(anyInput, MBX_KEY).then(function (result) {
+            searcher = result.features[0].center
+            console.log(searcher)
+            marker = new mapboxgl.Marker({
+                container: 'map',
+                draggable: true,
+                center: coords
+            })
+                .setLngLat([searcher[0], searcher[1]])
+                .addTo(map);
+
+
+        })
 
 
 //

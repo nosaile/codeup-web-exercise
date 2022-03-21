@@ -8,7 +8,7 @@ mapboxgl.accessToken = MBX_KEY;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v10',
-    zoom: zoom,
+    zoom: 10,
     center: [-97.3332, 32.7305],
 
 });

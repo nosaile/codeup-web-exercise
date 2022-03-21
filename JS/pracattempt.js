@@ -4,6 +4,7 @@ var anyInput = 'Ft Worth';
 var lat = 32.7532;
 var lon = -97.3327;
 var searcher;
+var geocoder;
 
 
 //map box
@@ -51,7 +52,8 @@ function newWeather(lat, lon) {
 
 
         geocode(anyInput, MBX_KEY).then(function (result) {
-            searcher = result.features[0].center
+            console.log(result)
+            searcher = result
             marker = new mapboxgl.Marker({
                 container: 'map',
                 draggable: true,
@@ -60,6 +62,31 @@ function newWeather(lat, lon) {
 
 
         })
+        //figure out how to undo mouseout event on search bar
+        //figure out how to implement this below code into weather portion
+        //pretty broken but close to done
+
+
+//roll with this
+        map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [lon, lat],
+            zoom: 8
+        });
+
+         marker = new mapboxgl.Marker();
+
+        function add_marker (event) {
+            var coordinates = event.lngLat;
+            console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat);
+            marker.setLngLat(coordinates).addTo(map);
+
+        }
+
+        map.on('click', add_marker);
+
+        //stop rolling
 
 
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${OWM_KEY}`)
@@ -90,6 +117,7 @@ function newWeather(lat, lon) {
 
 
 
+
                 });
 
 
@@ -100,8 +128,3 @@ function newWeather(lat, lon) {
     }
 
 }
-
-
-
-
-
