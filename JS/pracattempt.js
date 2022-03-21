@@ -1,4 +1,4 @@
-//weather box data
+
 
 var anyInput = 'Ft Worth';
 var lat = 32.7532;
@@ -6,7 +6,7 @@ var lon = -97.3327;
 var searcher;
 
 
-//map box
+
 
 newWeather(lat, lon)
 
@@ -25,13 +25,13 @@ function newWeather(lat, lon) {
 
         });
 
-        var marker = new mapboxgl.Marker({
-            container: 'map',
-            draggable: true,
-            center: [lon, lat]
-        })
-            .setLngLat([lon, lat])
-            .addTo(map);
+        // var marker = new mapboxgl.Marker({
+        //     container: 'map',
+        //     draggable: true,
+        //     center: [lon, lat]
+        // })
+        //     .setLngLat([lon, lat])
+        //     .addTo(map);
 
 
         map.addControl(
@@ -48,35 +48,39 @@ function newWeather(lat, lon) {
         geocode(anyInput, MBX_KEY).then(function (result) {
 
             searcher = result
-            marker = new mapboxgl.Marker({
-                container: 'map',
-                draggable: true,
-                center: [lon, lat]
-            })
 
 
         })
 
+       var marker = new mapboxgl.Marker({
+            color: "green",
+            draggable: true
+        }).setLngLat([map.getCenter().lng, map.getCenter().lat])
+            .addTo(map)
 
-//roll with this
-        //something with the the newWeather func is messing with the ability to see the marker
-        map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/dark-v10',
-            center: [lon, lat],
-            zoom: 8
-        });
 
-        marker = new mapboxgl.Marker();
+
+        function onDragEnd() {
+            const lngLat = marker.getLngLat();
+            newWeather(lngLat.lat, lngLat.lng)
+        }
+
+        marker.on('dragend', onDragEnd);
 
         function add_marker(event) {
             var coordinates = event.lngLat;
             marker.setLngLat(coordinates).addTo(map);
             newWeather(coordinates.lat, coordinates.lng);
+            // console.log(coordinates)
+
         }
 
-
         map.on('click', add_marker);
+
+
+        //get dragging to update weather
+
+
 
 
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${OWM_KEY}`)
