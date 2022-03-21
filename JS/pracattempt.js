@@ -4,7 +4,6 @@ var anyInput = 'Ft Worth';
 var lat = 32.7532;
 var lon = -97.3327;
 var searcher;
-var geocoder;
 
 
 //map box
@@ -26,7 +25,6 @@ function newWeather(lat, lon) {
 
         });
 
-
         var marker = new mapboxgl.Marker({
             container: 'map',
             draggable: true,
@@ -36,23 +34,19 @@ function newWeather(lat, lon) {
             .addTo(map);
 
 
-
-//mapbox geo coder
-
-
         map.addControl(
             new MapboxGeocoder({
                 container: 'map',
                 accessToken: mapboxgl.accessToken,
                 mapboxgl: mapboxgl,
-                marker: true,
+
 
             })
         );
 
 
         geocode(anyInput, MBX_KEY).then(function (result) {
-            console.log(result)
+
             searcher = result
             marker = new mapboxgl.Marker({
                 container: 'map',
@@ -62,31 +56,27 @@ function newWeather(lat, lon) {
 
 
         })
-        //figure out how to undo mouseout event on search bar
-        //figure out how to implement this below code into weather portion
-        //pretty broken but close to done
 
 
 //roll with this
+        //something with the the newWeather func is messing with the ability to see the marker
         map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
+            style: 'mapbox://styles/mapbox/dark-v10',
             center: [lon, lat],
             zoom: 8
         });
 
-         marker = new mapboxgl.Marker();
+        marker = new mapboxgl.Marker();
 
-        function add_marker (event) {
+        function add_marker(event) {
             var coordinates = event.lngLat;
-            console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat);
             marker.setLngLat(coordinates).addTo(map);
-
+            newWeather(coordinates.lat, coordinates.lng);
         }
 
-        map.on('click', add_marker);
 
-        //stop rolling
+        map.on('click', add_marker);
 
 
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${OWM_KEY}`)
@@ -110,12 +100,10 @@ function newWeather(lat, lon) {
                     html += '</div>'
                 }
 
-                $('.mapboxgl-ctrl-geocoder--input').mouseleave(function () {
+                $('.mapboxgl-ctrl-geocoder--input').keyup(function () {
                     anyInput = $('.mapboxgl-ctrl-geocoder--input').val()
                     newWeather(searcher[1], searcher[0])
                     theMap(searcher[1], searcher[0])
-
-
 
 
                 });
