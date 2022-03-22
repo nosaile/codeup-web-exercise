@@ -87,7 +87,7 @@ function renderWeatherCards(data) {
     console.log(data)
 
     for (let i = 0; i < 5; i++) {
-        html += '<div id="cards" class="card row-sm col-md-2 bg-dark text-center bg-opacity-50 " style="border-color: #edf5e1; border-style: solid">'
+        html += '<div id="cards" class="card row-sm col-md-2  text-center bg-opacity-50 " style="border-style: solid">'
         let dailyTemp = data.daily[i].temp.day;
         let dailySunUp = new Date(data.daily[i].sunrise * 1000).toLocaleString();
         let dailySunDown = new Date(data.daily[i].sunset * 1000).toLocaleString();
