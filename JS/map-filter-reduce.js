@@ -53,6 +53,21 @@ console.log(mapUsers);
 const xpMap = users.map(n => n.yearsOfExperience);
 console.log(xpMap);
 
+const reduceUsers = xpMap.reduce((total, cumulative) =>{
+    return total + cumulative;
+}, 0);
+console.log(reduceUsers)
+
+const reduceEmails = mapUsers.reduce(
+    function (x, y) {
+        return x.length > y.length ? x : y;
+    }
+);
+console.log(reduceEmails);
+
+
+const mapNames = users.map(n => n.name );
+console.log(mapNames);
 
 
 
