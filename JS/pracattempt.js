@@ -19,7 +19,7 @@ function theMap(lat, lon) {
     mapboxgl.accessToken = MBX_KEY;
     map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style: 'mapbox://styles/mapbox/dark-v10',
         zoom: 8,
         center: [lon, lat]
 
@@ -79,13 +79,10 @@ function getWeatherData(lat, lon) {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${OWM_KEY}`)
         .then(response => response.json())
         .then(data => renderWeatherCards(data)
-
-
-
-
         );
 }
-function renderWeatherCards(data){
+
+function renderWeatherCards(data) {
     let html = '';
     console.log(data)
 
@@ -110,6 +107,8 @@ function renderWeatherCards(data){
 
 
     $('#weather').html(html)
+
+
 
 
 }

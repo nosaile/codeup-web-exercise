@@ -18,8 +18,7 @@
 
     <style>
         body {
-            /*background-image: url("images/rainy.jpg");*/
-            background-color: #2f4454;
+            background-color: #11151C;
             font-family: Lobster Two;
         }
 
@@ -49,12 +48,15 @@
         .card {
             font-size: 18px;
             color: #edf5e1;
+            background-color: #11151C;
+
 
 
         }
 
         .card:hover {
-            color: #f8e9a1;
+            color: #D66853;
+            background-color: #D66853;
         }
 
         .card-header {
@@ -69,7 +71,16 @@
         }
 
         a:hover {
-            color: #e85a4f
+            color: #D66853
+        }
+
+        @media only screen and (max-width: 767px){
+
+            #cards{
+                width: 75%;
+                justify-content: space-between;
+
+            }
         }
 
 
@@ -86,7 +97,7 @@
 <div id="map">
 </div>
 <div id='chart' class="col">
-    <div id="weather" class="row justify-content-around"></div>
+    <div id="weather" class="row justify-content-around justify-content-between"></div>
 </div>
 
 <script src="js/pracattempt.js"></script>
