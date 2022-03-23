@@ -51,7 +51,7 @@ const xpMap = users.map(n => n.yearsOfExperience);
 const reduceUsers = xpMap.reduce((x, y) => {
     return (x + y);
 }, 0);
-console.log('total team xp in years on avg: ' + reduceUsers/xpMap.length)
+console.log('total team xp in years on avg: ' + reduceUsers / xpMap.length)
 
 
 const reduceEmails = mapUsers.reduce(
@@ -64,7 +64,16 @@ console.log("the longest email is: " + reduceEmails);
 
 const reduceNameArray = users.reduce((namelength, thenames) => {
     return namelength + thenames.name + ' '
-}, '');
+}, 'your instrcutors are: ');
 
-console.log('your instrcutors are: ' + reduceNameArray)
+console.log(reduceNameArray)
 
+let languages = users.reduce((listoflanguages, user) => {
+    user.languages.forEach(function (lang) {
+        if (!listoflanguages.includes(lang)) {
+            listoflanguages.push(lang);
+        }
+    })
+    return listoflanguages
+}, [])
+console.log(languages)
