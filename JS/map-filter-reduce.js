@@ -37,37 +37,33 @@ const users = [
 ];
 
 
-const filterUsers = users.filter(function (n){
+const filterUsers = users.filter(function (n) {
     return n.languages.length >= 3
 });
 console.log(filterUsers);
 
 
-const mapUsers = users.map(n => n.email );
+const mapUsers = users.map(n => n.email);
 console.log(mapUsers);
 
 
 const xpMap = users.map(n => n.yearsOfExperience);
-// console.log(xpMap);
-
-const reduceUsers = xpMap.reduce((total, cumulative) =>{
-    return total + cumulative;
+const reduceUsers = xpMap.reduce((x, y) => {
+    return x + y;
 }, 0);
-console.log('total team xp in years: ' +reduceUsers)
+console.log('total team xp in years: ' + reduceUsers)
 
 const reduceEmails = mapUsers.reduce(
     function (x, y) {
         return x.length > y.length ? x : y;
     }
 );
-console.log(reduceEmails);
-
-
+console.log("the longest email is: " + reduceEmails);
 
 
 const reduceNameArray = users.reduce((namelength, thenames) => {
-return namelength +thenames.name + ' '
-},'');
+    return namelength + thenames.name + ' '
+}, '');
 
 console.log('your instrcutors are: ' + reduceNameArray)
 
