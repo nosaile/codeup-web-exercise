@@ -49,9 +49,10 @@ console.log(mapUsers);
 
 const xpMap = users.map(n => n.yearsOfExperience);
 const reduceUsers = xpMap.reduce((x, y) => {
-    return x + y;
+    return (x + y);
 }, 0);
-console.log('total team xp in years: ' + reduceUsers)
+console.log('total team xp in years on avg: ' + reduceUsers/xpMap.length)
+
 
 const reduceEmails = mapUsers.reduce(
     function (x, y) {
