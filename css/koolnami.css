@@ -1,0 +1,15 @@
+body{
+    margin: 10em;
+    background-color: black;
+    color: greenyellow;
+}
+
+.blink_me {
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

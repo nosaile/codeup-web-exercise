@@ -8,7 +8,9 @@
     background-size: cover;
 }
 
-
+body {
+    background-color: #848487;
+}
 
 .display-4 {
 
