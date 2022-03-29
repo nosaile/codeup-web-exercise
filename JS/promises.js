@@ -1,4 +1,7 @@
 "use strict";
+//flex nav exercise html
+
+
 
 // renderGitData()
 // function renderGitData() {
@@ -6,8 +9,8 @@
 //         .then(response => response.json())
 //         .then(data => findGitData(data))
 //         .catch(error => console.log(error))
-//
-// };
+// //
+// // };
 //
 // function findGitData(data){
 //   var latestCommit = data[0].commit.author.date.substring(0, 10);
@@ -17,11 +20,13 @@
 //     $('.content').html(html)
 // }
 
-renderGitData()
 
+const baseURL = "https://api.github.com/"
+
+renderGitData()
 function renderGitData() {
 
-    fetch("https://api.github.com/repos/nosaile/codeup-web-exercises/commits", {headers: {'Authorization': `${GIT_KEY}`}})
+    fetch( baseURL + `repos/nosaile/codeup-web-exercises/commits`, {headers: {'Authorization': `${GIT_KEY}`}})
         .then(response => response.json())
         .then(data => findGitData(data))
         .catch(error => console.log(error))
